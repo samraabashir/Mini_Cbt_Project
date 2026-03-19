@@ -5,10 +5,10 @@
         <p>{{ q.text }}</p>
 
         {% for option in q.options %}
-            <input type="radio"
-             name="q{{ loop.parent.index0 }}" 
-             value="{{ option }}"> {{ option }}<br>
+            <input type="radio" name="q{{ loop.index0 }}" value="{{ option }}">
+            {{ option }}<br>
         {% endfor %}
+
     {% endfor %}
 
     <button type="submit">Submit</button>
